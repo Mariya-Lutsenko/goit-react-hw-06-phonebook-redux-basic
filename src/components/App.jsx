@@ -9,12 +9,10 @@ import { addContact, removeContact } from 'redux/contacts/contacts-actions';
 import { setFilter } from 'redux/filter/filter-actions';
 import { getContacts } from 'redux/contacts/contacts-selectors';
 import { getFilter } from 'redux/filter/filter-selectors';
-// import { addContact, , setFilter } from 'redux/actions';
-// import { getContacts, getFilter } from 'redux/selectors';
 
 function App() {
   const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter)
+  const filter = useSelector(getFilter);
 
   const dispatch = useDispatch();
 
@@ -46,7 +44,7 @@ function App() {
   // }, [contacts]);
 
   const changeFilter = event => {
-    dispatch(setFilter(event.currentTarget.value.trim()))
+    dispatch(setFilter(event.currentTarget.value.trim()));
   };
 
   const getVisisbleContacts = () => {
